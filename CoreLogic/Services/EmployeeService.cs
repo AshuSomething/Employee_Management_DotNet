@@ -45,5 +45,24 @@ namespace CoreLogic.Services
                 }
             }
         }
+
+        public void DeleteEmployee(Employee updatedEmployee)
+        {
+            using (MyContext ctx = new MyContext())
+            {
+                var existingEmployee = ctx.Employees.Find(updatedEmployee.Id);
+
+                if (existingEmployee != null)
+                {
+                    // Update the properties of the existing product
+                    existingEmployee.Name = updatedEmployee.Name;
+                    existingEmployee.Email = updatedEmployee.Email;
+                    existingEmployee.Password = updatedEmployee.Password;
+                    //existingProduct.Id = updatedProduct.Id;
+
+                    ctx.SaveChanges();
+                }
+            }
+        }
     }
 }
