@@ -3424,19 +3424,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ashle\\.nuget\\packages\\": {}
+    "C:\\Users\\mohit\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj",
+      "projectUniqueName": "E:\\EXPERIMENTS\\DotNet Proj\\CoreLogic\\CoreLogic.csproj",
       "projectName": "CoreLogic",
-      "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj",
-      "packagesPath": "C:\\Users\\ashle\\.nuget\\packages\\",
-      "outputPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\obj\\",
+      "projectPath": "E:\\EXPERIMENTS\\DotNet Proj\\CoreLogic\\CoreLogic.csproj",
+      "packagesPath": "C:\\Users\\mohit\\.nuget\\packages\\",
+      "outputPath": "E:\\EXPERIMENTS\\DotNet Proj\\CoreLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ashle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mohit\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3489,7 +3489,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
