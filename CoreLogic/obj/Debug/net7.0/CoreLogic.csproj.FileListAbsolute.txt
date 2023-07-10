@@ -12,17 +12,3 @@ D:\dotnet\Employee_Management\Employee_Management_DotNet\CoreLogic\obj\Debug\net
 D:\dotnet\Employee_Management\Employee_Management_DotNet\CoreLogic\obj\Debug\net7.0\CoreLogic.pdb
 D:\dotnet\Employee_Management\Employee_Management_DotNet\CoreLogic\obj\Debug\net7.0\CoreLogic.genruntimeconfig.cache
 D:\dotnet\Employee_Management\Employee_Management_DotNet\CoreLogic\obj\Debug\net7.0\ref\CoreLogic.dll
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\bin\Debug\net7.0\CoreLogic.deps.json
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\bin\Debug\net7.0\CoreLogic.runtimeconfig.json
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\bin\Debug\net7.0\CoreLogic.dll
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\bin\Debug\net7.0\CoreLogic.pdb
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\CoreLogic.csproj.AssemblyReference.cache
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\CoreLogic.GeneratedMSBuildEditorConfig.editorconfig
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\CoreLogic.AssemblyInfoInputs.cache
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\CoreLogic.AssemblyInfo.cs
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\CoreLogic.csproj.CoreCompileInputs.cache
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\CoreLogic.dll
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\refint\CoreLogic.dll
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\CoreLogic.pdb
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\CoreLogic.genruntimeconfig.cache
-E:\EXPERIMENTS\DotNet Proj\CoreLogic\obj\Debug\net7.0\ref\CoreLogic.dll
