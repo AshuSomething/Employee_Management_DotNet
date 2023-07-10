@@ -1,27 +1,24 @@
 ﻿@page
 @model WebApp.Attandances.IndexModel
-@{
-}
 
-<html>
-<head>
-    <title>Employee Attendance</title>
-</head>
-<body>
-    <h1>Employee Attendance</h1>
+<form method="get" asp-page="Details">
+    <label for="id">Enter ID:</label>
+    <input type="text" id="id" name="id" />
+    <button type="submit">Submit</button>
+</form>
 
-    <table class="table mt-4">
+<h1>Employee Attendance</h1>
+
+<table class="table mt-4">
+    <tr>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+    @foreach (var attendance in Model.Attendances)
+    {
         <tr>
-            <th>Date</th>
-            <th>Status</th>
+            <td>@attendance.Date.ToString("dd/MM/yyyy")</td>
+            <td>@attendance.Status</td>
         </tr>
-        @foreach (var attendance in Model.Attendances)
-        {
-            <tr>
-                <td>@attendance.Date.ToString("dd/MM/yyyy")</td>
-                <td>@attendance.Status</td>
-            </tr>
-        }
-    </table>
-</body>
-</html>
+    }
+</table>
