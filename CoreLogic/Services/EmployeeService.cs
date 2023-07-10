@@ -19,6 +19,16 @@ namespace CoreLogic.Services
             return Employees;
         }
 
+        public Employee GetEmployee(string id_as_string)
+        {
+            int id = Convert.ToInt32(id_as_string);
+            using (MyContext ctx = new MyContext())
+            {
+                var Employee = ctx.Employees.Find(id);
+                return Employee;
+            }
+        }
+
         public void AddEmployee(Employee employee)
         {
             using (MyContext ctx = new MyContext())
