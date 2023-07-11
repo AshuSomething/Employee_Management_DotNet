@@ -5,13 +5,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApp.Pages
 {
-    public class IndexModel : PageModel
-    {
-        public List<Employee> employees { get; set; }
-        public void OnGet()
-        {
-            EmployeeService employeeService = new EmployeeService();
-            employees = employeeService.GetAllEmployees();
-        }
-    }
+	public class IndexModel : PageModel
+	{
+		public List<Employee> employees { get; set; }
+
+		public void OnGet()
+		{
+			EmployeeService employeeService = new EmployeeService();
+			employees = employeeService.GetAllEmployees();
+
+
+		}
+	}
 }
