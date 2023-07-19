@@ -1,7 +1,22 @@
+using EFGetStarted;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+
+
+builder.Services.AddDbContext<MyContext>();
+
+builder.Services.AddAuthentication("CookieAuth")
+    .AddCookie("CookieAuth", config =>
+    {
+        config.Cookie.Name = "User.Cookie";
+        config.LoginPath = "/Login";
+        config.LogoutPath = "/Logout";
+    });
+
 
 var app = builder.Build();
 
