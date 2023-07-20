@@ -3958,19 +3958,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ashle\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreTests\\CoreTests.csproj",
+      "projectUniqueName": "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreTests\\CoreTests.csproj",
       "projectName": "CoreTests",
-      "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreTests\\CoreTests.csproj",
-      "packagesPath": "C:\\Users\\ashle\\.nuget\\packages\\",
-      "outputPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreTests\\obj\\",
+      "projectPath": "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreTests\\CoreTests.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ashle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4033,7 +4038,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
