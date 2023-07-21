@@ -59,11 +59,14 @@ namespace CoreLogic.Services
         public void DeleteEmployee(string id_as_string)
         {
             int employeeId = Convert.ToInt32(id_as_string);
+
             using (MyContext ctx = new MyContext())
             {
+                
                 if (employeeId != null)
                 {
-                    ctx.Employees.Remove(ctx.Employees.Find(employeeId));
+                    Employee emptodelete = ctx.Employees.Find(employeeId);
+                    ctx.Employees.Remove(emptodelete);
 
                     ctx.SaveChanges();
                 }
