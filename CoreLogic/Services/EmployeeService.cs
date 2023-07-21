@@ -19,9 +19,9 @@ namespace CoreLogic.Services
             return Employees;
         }
 
-        public Employee GetEmployee(string id_as_string)
+        public Employee GetEmployee(int id)
         {
-            int id = Convert.ToInt32(id_as_string);
+            //int id = Convert.ToInt32(id_as_string);
             using (MyContext ctx = new MyContext())
             {
                 var Employee = ctx.Employees.Find(id);
@@ -56,19 +56,14 @@ namespace CoreLogic.Services
             }
         }
 
-        public void DeleteEmployee(Employee updatedEmployee)
+        public void DeleteEmployee(int employeeId)
         {
+            //int employeeId = Convert.ToInt32(id_as_string);
             using (MyContext ctx = new MyContext())
             {
-                var existingEmployee = ctx.Employees.Find(updatedEmployee.Id);
-
-                if (existingEmployee != null)
+                if (employeeId != null)
                 {
-                    // Update the properties of the existing product
-                    existingEmployee.Name = updatedEmployee.Name;
-                    existingEmployee.Email = updatedEmployee.Email;
-                    existingEmployee.Password = updatedEmployee.Password;
-                    //existingProduct.Id = updatedProduct.Id;
+                    ctx.Employees.Remove(ctx.Employees.Find(employeeId));
 
                     ctx.SaveChanges();
                 }
