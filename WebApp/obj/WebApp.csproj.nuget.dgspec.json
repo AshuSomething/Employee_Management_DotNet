@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj": {}
+    "D:\\RaviSir\\Employee_Attandance_management(New)\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj": {
+    "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreLogic\\CoreLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj",
+        "projectUniqueName": "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreLogic\\CoreLogic.csproj",
         "projectName": "CoreLogic",
-        "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj",
-        "packagesPath": "C:\\Users\\ashle\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\obj\\",
+        "projectPath": "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreLogic\\CoreLogic.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreLogic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ashle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,21 +71,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj": {
+    "D:\\RaviSir\\Employee_Attandance_management(New)\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "D:\\RaviSir\\Employee_Attandance_management(New)\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\ashle\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\obj\\",
+        "projectPath": "D:\\RaviSir\\Employee_Attandance_management(New)\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\RaviSir\\Employee_Attandance_management(New)\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ashle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,14 +97,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj": {
-                "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj"
+              "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreLogic\\CoreLogic.csproj": {
+                "projectPath": "D:\\RaviSir\\Employee_Attandance_management(New)\\CoreLogic\\CoreLogic.csproj"
               }
             }
           }
@@ -129,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
