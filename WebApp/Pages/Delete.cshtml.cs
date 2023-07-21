@@ -1,43 +1,53 @@
 using CoreLogic.Models;
 using CoreLogic.Services;
+using EFGetStarted;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApp.Pages
 {
     public class DeleteModel : PageModel
     {
+        private MyContext _context;
+        public DeleteModel(MyContext ctx)
+        {
+            _context = ctx;
+        }
         [BindProperty(SupportsGet = true)]
         public string id { get; set; }
-        public Employee employee { get; set; }
 
-        public void OnGet()
+        [BindProperty]
+        public Employee Employee { get; set; }
+        
+       /* public void OnGet()
         {
             EmployeeService employeeService = new EmployeeService();
-            employee = employeeService.GetEmployee(id);
+            Employee = employeeService.GetEmployee(id);
+        }*/
+
+        public IActionResult OnGet()
+        {
+            // Fetch the employee from the database using the Id
+            EmployeeService employeeService = new EmployeeService();
+            Employee = employeeService.GetEmployee(id);
+
+            if (Employee == null)
+            {
+                return RedirectToPage("./Index");
+            }
+
+            return Page();
         }
 
-        /* public IActionResult OnGet()
-         {
-             // Fetch the employee from the database using the Id
-             Employee = _employeeService.GetEmployeeById(Id);
 
-             if (Employee == null)
-             {
-                 return RedirectToPage("./Index");
-             }
-
-             return Page();
-         }*/
-        
-        /*public IActionResult OnPost()
+        public IActionResult OnPost(string id)
         {
-            if (ModelState.IsValid)
+            if (ModelState!= null)
             {
-
-                string EmployeeId = Convert.ToString(Employee.Id);
+                //string id = Convert.ToString(Employee.Id);
                 EmployeeService employeeService = new EmployeeService();
-                employeeService.DeleteEmployee(EmployeeId);
+                employeeService.DeleteEmployee(id); // Access Employee.Id directly
 
                 return RedirectToPage("./Index");
             }
@@ -45,6 +55,7 @@ namespace WebApp.Pages
             {
                 return Page();
             }
-        }*/
+        }
+
     }
 }

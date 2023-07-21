@@ -1,19 +1,31 @@
 ﻿@page
 @model WebApp.Pages.DeleteModel
 @{
+    ViewData["Title"] = "Delete Employee";
     @Model.id
 }
 
-
+<h3>Delete Employee</h3>
 <div class="container">
     <h1>Employee Details</h1>
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Employee ID: @Model.employee.Id</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Name: @Model.employee.Name</h6>
-            <p class="card-text">Email: @Model.employee.Email</p>
+            <h5 class="card-title">Employee ID: @Model.Employee.Id</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Name: @Model.Employee.Name</h6>
+            <p class="card-text">Email: @Model.Employee.Email</p>
+            <form method="post" onsubmit="return confirmDelete();">
+                <input type="hidden" asp-for="Employee.Id" />
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         </div>
     </div>
-    <button class="btn btn-primary">Check-in</button>
-    <button class="btn btn-primary">Check-out</button>
 </div>
+
+@section Scripts {
+    <script>
+        // Function to show the delete confirmation
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete the employee?");
+        }
+    </script>
+}
