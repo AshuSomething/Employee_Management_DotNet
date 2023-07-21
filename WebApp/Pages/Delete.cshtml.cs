@@ -8,41 +8,34 @@ namespace WebApp.Pages
     public class DeleteModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
-        public int EmployeeId { get; set; }
+        public string id { get; set; }
+        public Employee employee { get; set; }
 
-        public Employee Employee { get; set; }
-
-        public IActionResult OnGet()
+        public void OnGet()
         {
-            // Fetch the employee from the database using the EmployeeId
             EmployeeService employeeService = new EmployeeService();
-            Employee = employeeService.GetEmployee(EmployeeId);
-
-            if (Employee == null)
-            {
-                return RedirectToPage("./Index");
-            }
-
-            return Page();
+            employee = employeeService.GetEmployee(id);
         }
 
-       /* public IActionResult OnGet()
-        {
-            // Fetch the employee from the database using the Id
-            Employee = _employeeService.GetEmployeeById(Id);
+        /* public IActionResult OnGet()
+         {
+             // Fetch the employee from the database using the Id
+             Employee = _employeeService.GetEmployeeById(Id);
 
-            if (Employee == null)
-            {
-                return RedirectToPage("./Index");
-            }
+             if (Employee == null)
+             {
+                 return RedirectToPage("./Index");
+             }
 
-            return Page();
-        }*/
-
-        public IActionResult OnPost()
+             return Page();
+         }*/
+        
+        /*public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
+
+                string EmployeeId = Convert.ToString(Employee.Id);
                 EmployeeService employeeService = new EmployeeService();
                 employeeService.DeleteEmployee(EmployeeId);
 
@@ -52,6 +45,6 @@ namespace WebApp.Pages
             {
                 return Page();
             }
-        }
+        }*/
     }
 }
