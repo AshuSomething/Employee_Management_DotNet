@@ -1,0 +1,19 @@
+﻿@page
+@model WebApp.Pages.DeleteModel
+@{
+    @Model.id
+}
+
+
+<div class="container">
+    <h1>Employee Details</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Employee ID: @Model.employee.Id</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Name: @Model.employee.Name</h6>
+            <p class="card-text">Email: @Model.employee.Email</p>
+        </div>
+    </div>
+    <button class="btn btn-primary">Check-in</button>
+    <button class="btn btn-primary">Check-out</button>
+</div>
