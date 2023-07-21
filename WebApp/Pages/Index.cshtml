@@ -11,6 +11,8 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th> </th>
+                <th> </th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +21,16 @@
                 <tr>
                     <td>@user.Id</td>
                     <td>@user.Name</td>
+                        <td>
+                            <a href="@Url.Page("EmployeeDetails", new { id = user.Id })" style="text-decoration: underline;">Details</a>
+                        </td>
+
+                        <td>
+                            <a href="@Url.Page("Attandances/abcd", new { id = user.Id })" style="text-decoration: underline;">Attendance</a>
+                        </td>
+                    <td>
+                        <a href="@Url.Page("Delete", new { id = user.Id })" style="text-decoration: underline;">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>
