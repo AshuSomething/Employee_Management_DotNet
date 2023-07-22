@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoreLogic.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20230720095032_InitialCreate")]
+    [Migration("20230722214431_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -42,13 +42,13 @@ namespace CoreLogic.Migrations
                     b.Property<DateTime>("LoginTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("LogoutTime")
+                    b.Property<DateTime?>("LogoutTime")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.Property<TimeSpan>("WorkingHour")
+                    b.Property<TimeSpan?>("WorkingHour")
                         .HasColumnType("time");
 
                     b.HasKey("Id");

@@ -36,8 +36,8 @@ namespace CoreLogic.Migrations
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false),
                     LoginTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LogoutTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    WorkingHour = table.Column<TimeSpan>(type: "time", nullable: false)
+                    LogoutTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    WorkingHour = table.Column<TimeSpan>(type: "time", nullable: true)
                 },
                 constraints: table =>
                 {

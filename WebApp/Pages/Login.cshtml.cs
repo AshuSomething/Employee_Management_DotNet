@@ -13,14 +13,18 @@ namespace WebApp.Pages;
 public class LoginModel : PageModel
 {
     [BindProperty]
-    public string Id { get; set; }
+    public string id { get; set; }
+    [BindProperty]
+    public string username { get; set; }
+    [BindProperty]
+    public string password { get; set; }
 
     public async Task<IActionResult> OnPostAsync()
     {
         // Here you can validate the user credentials against your database
         // Retrieve the user from your database.
         EmployeeService employeeService = new EmployeeService();
-        var user = employeeService.GetEmployee(Id);
+        var user = employeeService.GetEmployee(id);
 
         if (user == null)
         {
@@ -29,24 +33,24 @@ public class LoginModel : PageModel
             return Page();
         }
 
-        /*if (Password != user.Password)
+        if (username != user.Name || password != user.Password)
         {
             // Passwords don't match.
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return Page();
-        }*/
+        }
 
         // User has provided valid credentials. Proceed with your login process...
         await SignInUser();
 
-        return RedirectToPage("/Index");
+        return RedirectToPage("/EmployeeDetails", new { id = id });
     }
 
     private async Task SignInUser()
     {       
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, Id)
+            new Claim(ClaimTypes.Name, id)
         };
 
         var claimsIdentity = new ClaimsIdentity(claims, "CookieAuth");

@@ -16,27 +16,24 @@ namespace CoreLogic.Services
                 var existingAttendance = ctx.Attandances
                     .FirstOrDefault(a => a.EmployeeId == employeeId && a.Date.Date == DateTime.Today);
 
-                if (existingAttendance != null)
+                if (existingAttendance == null)
                 {
-                    // Employee already checked in today, update the login time
-                    existingAttendance.LoginTime = loginTime;
-                    ctx.SaveChanges();
-                }
-                else
-                {
-                    // Employee is checking in for the first time today, create a new attendance record
                     var newAttendance = new Attandance
                     {
                         EmployeeId = employeeId,
                         Date = DateTime.Today,
                         Status = true, // Assuming 'true' means 'present' or 'checked in'
                         LoginTime = loginTime,
-                        LogoutTime = new DateTime(2000, 1, 1), // Initial default value for LogoutTime
-                        WorkingHour = TimeSpan.Zero // Initial default value for WorkingHour
+                        LogoutTime = null, // Initial default value for LogoutTime
+                        WorkingHour = null // Initial default value for WorkingHour
                     };
 
                     ctx.Attandances.Add(newAttendance);
                     ctx.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("You have already checked in for the day");
                 }
             }
             
@@ -51,6 +48,10 @@ namespace CoreLogic.Services
 
                 if (existingAttendance != null)
                 {
+                    if(existingAttendance.LogoutTime != null)
+                    {
+                        throw new Exception("you have checked out for the day");
+                    }
                     // Update the logout time
                     existingAttendance.LogoutTime = logoutTime;
 
@@ -61,8 +62,7 @@ namespace CoreLogic.Services
                 }
                 else
                 {
-                    throw new InvalidOperationException("You are not logged in. Please check in before attempting to check out.");
-
+                    throw new Exception("please check in first");
                 }
             }
 

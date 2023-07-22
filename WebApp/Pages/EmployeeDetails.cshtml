@@ -5,14 +5,46 @@
 
 
 <div class="container">
-    <h1>Employee Details</h1>
     <div class="card">
+        <h5 class="card-header">Employee Details</h5>
         <div class="card-body">
-            <h5 class="card-title">Employee ID: @Model.employee.Id</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Name: @Model.employee.Name</h6>
+            <h6 class="card-title mb-3">Employee ID: @Model.employee.Id</h6>
+            <p class="card-text">Name: @Model.employee.Name</p>
             <p class="card-text">Email: @Model.employee.Email</p>
+            <div class="buttons d-flex w-25 justify-content-between">
+            <form asp-page-handler="checkIn" method="post" asp-route-id=@Model.employee.Id>
+                <button class="btn btn-primary">Check-in</button>
+            </form>
+                <form asp-page-handler="checkOut" method="post" asp-route-id=@Model.employee.Id>
+                <button class="btn btn-primary">Check-out</button>
+            </form>
+            </div>
         </div>
     </div>
-    <button class="btn btn-primary">Check-in</button>
-    <button class="btn btn-primary">Check-out</button>
+    
 </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @Model.message
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+
+@if (Model.message != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            $("#exampleModal").modal("show")
+        };
+    </script>
+}

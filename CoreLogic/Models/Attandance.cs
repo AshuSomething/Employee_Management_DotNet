@@ -14,8 +14,8 @@ namespace CoreLogic.Models
         public DateTime Date { get; set; }
         public bool Status { get; set; }
         public DateTime LoginTime { get; set; }
-        public DateTime LogoutTime { get; set; }
-        public TimeSpan WorkingHour { get; set; } 
+        public DateTime? LogoutTime { get; set; }
+        public TimeSpan? WorkingHour { get; set; } 
         public Employee? Employee { get; set; }
 
     }
