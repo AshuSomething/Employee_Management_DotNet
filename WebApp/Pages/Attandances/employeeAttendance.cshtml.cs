@@ -1,10 +1,12 @@
 using CoreLogic.Models;
 using EFGetStarted;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApp.Pages.Attandances
 {
+    [Authorize]
     public class abcdModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
@@ -14,12 +16,17 @@ namespace WebApp.Pages.Attandances
 
         public List<Employee> EmployeesName { get; set; }
 
-
-        public void OnGet()
+        public IActionResult OnGet()
         {
             int employeeId = Id; // Replace with the actual employee ID
             Attendances = GetAllAttendancesForId(employeeId);
-            EmployeesName = GetNameForId(Id);
+            EmployeesName = GetNameForId();
+
+            if(employeeId != Convert.ToInt32(User.Identity.Name))
+            {
+                return Redirect("/AccessDenied");
+            }
+            return Page();
         }
 
         private List<Attandance> GetAllAttendancesForId(int employeeId)
@@ -32,7 +39,7 @@ namespace WebApp.Pages.Attandances
             return attendances;
         }
 
-        private List<Employee> GetNameForId(int employeeId)
+        private List<Employee> GetNameForId()
         {
             // Retrieve the attendances from your data source (database, API, etc.)
             // Replace this with your actual data retrieval logic

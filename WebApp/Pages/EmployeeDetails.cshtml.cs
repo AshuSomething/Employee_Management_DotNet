@@ -1,21 +1,28 @@
 using CoreLogic.Models;
 using CoreLogic.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace WebApp.Pages
 {
+    [Authorize]
     public class EmployeeDetailsModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
         public string id { get; set; }
         public Employee employee { get; set; }
         public string message { get; set; }
-        public void OnGet()
+        public IActionResult OnGet()
         {
             EmployeeService employeeService = new EmployeeService();
             employee = employeeService.GetEmployee(id);
+            if (id != User.Identity.Name)
+            {
+                return Redirect("/AccessDenied");
+            }
+            return Page();
         }
 
         public void OnPostCheckIn(string id)
