@@ -1,0 +1,59 @@
+﻿@page
+@model WebApp.Pages.AccessDeniedModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Denied</title>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0; /* Optional: Remove default margin */
+        }
+
+        .access-denied-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .caution-icon {
+            font-size: 60px;
+            color: #ff4500;
+        }
+
+        .access-denied-box {
+            border: 2px solid #ff4500;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="access-denied-container">
+        <div class="caution-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="access-denied-box">
+            <h1>Access Denied</h1>
+        </div>
+    </div>
+</body>
+</html>
