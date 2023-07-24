@@ -1,24 +1,117 @@
 ﻿@page
 @model WebApp.Attandances.IndexModel
 
-<form method="get" asp-page="Details">
-    <label for="id">Enter ID:</label>
-    <input type="text" id="id" name="id" />
-    <button type="submit">Submit</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Attendance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
 
-<h1>Employee Attendance</h1>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-<table class="table mt-4">
-    <tr>
-        <th>Date</th>
-        <th>Status</th>
-    </tr>
-    @foreach (var attendance in Model.Attendances)
-    {
-        <tr>
-            <td>@attendance.Date.ToString("dd/MM/yyyy")</td>
-            <td>@attendance.Status</td>
-        </tr>
-    }
-</table>
+        h1 {
+            font-size: 24px; /* Adjust the font size as needed */
+            color: #007bff;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-right: 10px;
+            font-size: 14px; /* Adjust the font size as needed */
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 5px 8px; /* Adjust the padding as needed */
+            font-size: 14px; /* Adjust the font size as needed */
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 8px 12px; /* Adjust the padding as needed */
+            font-size: 14px; /* Adjust the font size as needed */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            button[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3">
+        <form method="get" asp-page="Details">
+            <label for="id">Enter ID:</label>
+            <input class=" mr-3" type="text" id="id" name="id" />
+            <button type="submit">Submit</button>
+        </form>
+
+        <h1>Employee Attendance</h1>
+
+        <table class="table mt-4">
+            <tr>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            @foreach (var attendance in Model.Attendances)
+            {
+                <tr>
+                    <td>@attendance.Date.ToString("dd/MM/yyyy")</td>
+                    <td>@attendance.Status</td>
+                </tr>
+            }
+        </table>
+
+
+    </div>
+    <!-- jQuery (required for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
