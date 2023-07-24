@@ -3,16 +3,40 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApp</title>
+    <title>@ViewData["Title"] - Attendance Tracker</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebApp.styles.css" asp-append-version="true" />
+
+    <style>
+        /* Custom CSS for logout button */
+        .navbar-nav .nav-item .nav-link {
+            transition: background-color 0.3s, color 0.3s; /* Adding transition for smooth effect */
+            border-radius: 15px; /* Adding border-radius to curve the edges */
+        }
+
+            .navbar-nav .nav-item .nav-link:not(.logout-button):hover {
+                background-color: transparent;
+            }
+
+            .navbar-nav .nav-item .nav-link.logout-button:hover {
+                background-color: #dc3545; /* Change to the desired highlight color on hover (red color) */
+                color: #fff; /* Change to the desired text color on hover */
+            }
+
+            .navbar-nav .nav-item .nav-link.logout-button:focus,
+            .navbar-nav .nav-item .nav-link.logout-button:active {
+                background-color: #c82333; /* Change to the desired highlight color when active (darker red color) */
+                color: #fff; /* Change to the desired text color when active */
+            }
+    </style>
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">WebApp</a>
+                <a class="navbar-brand mb-2" asp-area="" asp-page="/Index">Attendance Tracker</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,15 +47,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Attandances/Index">Attendance</a>
                         </li>
+                    </ul>
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Logout">Logout</a>
+                            <a class="nav-link text-dark font-weight-bold logout-button" asp-area=" " asp-page="/Logout">Logout</a>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -44,7 +68,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - WebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2023 - Attendance Tracker - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 
