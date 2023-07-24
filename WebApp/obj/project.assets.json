@@ -3197,19 +3197,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mohit\\.nuget\\packages\\": {}
+    "C:\\Users\\ashle\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\EXPERIMENTS\\24072002\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "E:\\EXPERIMENTS\\24072002\\WebApp\\WebApp.csproj",
-      "packagesPath": "C:\\Users\\mohit\\.nuget\\packages\\",
-      "outputPath": "E:\\EXPERIMENTS\\24072002\\WebApp\\obj\\",
+      "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj",
+      "packagesPath": "C:\\Users\\ashle\\.nuget\\packages\\",
+      "outputPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mohit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ashle\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3223,8 +3223,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\EXPERIMENTS\\24072002\\CoreLogic\\CoreLogic.csproj": {
-              "projectPath": "E:\\EXPERIMENTS\\24072002\\CoreLogic\\CoreLogic.csproj"
+            "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj": {
+              "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj"
             }
           }
         }
@@ -3257,7 +3257,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
