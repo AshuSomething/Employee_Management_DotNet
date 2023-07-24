@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj": {}
+    "E:\\EXPERIMENTS\\24072002\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj": {
+    "E:\\EXPERIMENTS\\24072002\\CoreLogic\\CoreLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj",
+        "projectUniqueName": "E:\\EXPERIMENTS\\24072002\\CoreLogic\\CoreLogic.csproj",
         "projectName": "CoreLogic",
-        "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj",
-        "packagesPath": "C:\\Users\\ashle\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\obj\\",
+        "projectPath": "E:\\EXPERIMENTS\\24072002\\CoreLogic\\CoreLogic.csproj",
+        "packagesPath": "C:\\Users\\mohit\\.nuget\\packages\\",
+        "outputPath": "E:\\EXPERIMENTS\\24072002\\CoreLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ashle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mohit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,21 +67,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj": {
+    "E:\\EXPERIMENTS\\24072002\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "E:\\EXPERIMENTS\\24072002\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\ashle\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\WebApp\\obj\\",
+        "projectPath": "E:\\EXPERIMENTS\\24072002\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\mohit\\.nuget\\packages\\",
+        "outputPath": "E:\\EXPERIMENTS\\24072002\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ashle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mohit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,8 +95,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj": {
-                "projectPath": "D:\\dotnet\\Employee_Management\\Employee_Management_DotNet\\CoreLogic\\CoreLogic.csproj"
+              "E:\\EXPERIMENTS\\24072002\\CoreLogic\\CoreLogic.csproj": {
+                "projectPath": "E:\\EXPERIMENTS\\24072002\\CoreLogic\\CoreLogic.csproj"
               }
             }
           }
@@ -129,7 +129,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
