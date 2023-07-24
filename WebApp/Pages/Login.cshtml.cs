@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 using CoreLogic.Models;
 using CoreLogic.Services;
+using System.Data;
 
 namespace WebApp.Pages;
 
@@ -18,6 +19,7 @@ public class LoginModel : PageModel
     public string username { get; set; }
     [BindProperty]
     public string password { get; set; }
+    public string Role { get; set; }
 
     public async Task<IActionResult> OnPostAsync()
     {
@@ -40,6 +42,8 @@ public class LoginModel : PageModel
             return Page();
         }
 
+        Role = user.Roles;
+
         // User has provided valid credentials. Proceed with your login process...
         await SignInUser();
 
@@ -50,7 +54,8 @@ public class LoginModel : PageModel
     {       
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, id)
+            new Claim(ClaimTypes.Name, id),
+            new Claim("Role", Role)
         };
 
         var claimsIdentity = new ClaimsIdentity(claims, "CookieAuth");

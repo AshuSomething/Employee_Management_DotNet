@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApp.Pages
 {
-    [Authorize]
+    [Authorize(Policy = "AdminOnly")]
     public class IndexModel : PageModel
     {
         public List<Employee> employees { get; set; }

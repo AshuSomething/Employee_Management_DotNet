@@ -2,6 +2,7 @@
 using EFGetStarted;
 using System;
 using System.Linq;
+using System.Security.Claims;
 
 namespace CoreLogic.Services
 {
@@ -10,6 +11,8 @@ namespace CoreLogic.Services
 
         public void CheckIn(int employeeId, DateTime loginTime)
         {
+            //var claims = ClaimsPrincipal.Current.Identities.First().Claims.ToList();
+            //Console.WriteLine(claims.Count);
             using (MyContext ctx = new MyContext())
             {
                 // Check if there is an existing attendance for the employee on the current date

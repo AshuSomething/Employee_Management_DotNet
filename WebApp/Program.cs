@@ -15,8 +15,20 @@ builder.Services.AddAuthentication("CookieAuth")
         config.Cookie.Name = "User.Cookie";
         config.LoginPath = "/Login";
         config.LogoutPath = "/Logout";
+        config.AccessDeniedPath = "/Logout";
     });
 
+/*builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    // Add more policies as needed.
+});*/
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+                      policy.RequireClaim("Role", "Admin"));
+});
 
 var app = builder.Build();
 
