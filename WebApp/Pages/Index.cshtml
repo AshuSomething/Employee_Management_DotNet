@@ -11,10 +11,9 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th> </th>
-                <th> </th>
-                <th> </th>
-
+                <th>Details</th>
+                <th>Attendance</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -23,15 +22,14 @@
                 <tr>
                     <td>@user.Id</td>
                     <td>@user.Name</td>
-                        <td>
-                            <a href="@Url.Page("EmployeeDetails", new { id = user.Id })" style="text-decoration: underline;">Details</a>
-                        </td>
-
-                        <td>
-                            <a href="@Url.Page("Attandances/abcd", new { id = user.Id })" style="text-decoration: underline;">Attendance</a>
-                        </td>
                     <td>
-                        <a href="@Url.Page("Delete", new { id = user.Id })" style="text-decoration: underline;">Delete</a>
+                        <a href="@Url.Page("EmployeeDetails", new { id = user.Id })" class="btn btn-info btn-sm rounded-pill">Details</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Page("Attandances/abcd", new { id = user.Id })" class="btn btn-success btn-sm rounded-pill">Attendance</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Page("Delete", new { id = user.Id })" class="btn btn-danger btn-sm rounded-pill">Delete</a>
                     </td>
                 </tr>
             }
