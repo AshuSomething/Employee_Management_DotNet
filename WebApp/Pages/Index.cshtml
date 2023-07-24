@@ -1,6 +1,30 @@
 ﻿@page
 @model IndexModel
 @{
+    ViewData["Title"] = "Home page";
 }
+<div class="container">
+    <div class="row align-items-center justify-content-center text-center vh-100">
+        <div class="col-lg-8">
+            <h1 class="display-4 mb-4">Hello!, Welcome to Attendance Tracker</h1>
+            <p class="lead">
+                Simplify employee attendance management with our intuitive app.
+            </p>
+            <p class="lead">
+                Record attendance with just a few clicks.
+            </p>
+            <a href="@Url.Page("EmployeeDetails")" class="btn btn-primary btn-lg rounded-pill mt-4">Record Timestamp</a>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <p class="text-center">
+                Thank you for choosing Attendance Tracker! If you have any questions or need assistance, feel free to reach out to our support team.
+            </p>
+        </div>
+    </div>
+</div>
 
-<h1>Hii There</h1>
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+}
