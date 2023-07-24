@@ -62,15 +62,33 @@ namespace CoreLogic.Services
 
             using (MyContext ctx = new MyContext())
             {
-                
-                if (employeeId != null)
+                Employee employeeToDelete = ctx.Employees.Find(employeeId);
+
+                if (employeeToDelete != null)
                 {
-                    Employee emptodelete = ctx.Employees.Find(employeeId);
-                    ctx.Employees.Remove(emptodelete);
+                    // Transfer the data to DeletedEmployees table
+                    TransferToDeletedEmployees(ctx, employeeToDelete);
+
+                    // Remove the employee from Employees table
+                    ctx.Employees.Remove(employeeToDelete);
 
                     ctx.SaveChanges();
                 }
             }
+        }
+
+        private void TransferToDeletedEmployees(MyContext ctx, Employee employeeToDelete)
+        {
+            // Create a new DeletedEmployee object with the data from the employee to be deleted
+            var deletedEmployee = new DeletedEmployee
+            {
+                Name = employeeToDelete.Name,
+                Email = employeeToDelete.Email,
+                Password = employeeToDelete.Password
+            };
+
+            // Add the new DeletedEmployee to the DeletedEmployees table
+            ctx.DeletedEmployees.Add(deletedEmployee);
         }
     }
 }
