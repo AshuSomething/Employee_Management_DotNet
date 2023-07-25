@@ -1,0 +1,14 @@
+E:\EXPERIMENTS\25072023\CoreLogic\bin\Debug\net7.0\CoreLogic.deps.json
+E:\EXPERIMENTS\25072023\CoreLogic\bin\Debug\net7.0\CoreLogic.runtimeconfig.json
+E:\EXPERIMENTS\25072023\CoreLogic\bin\Debug\net7.0\CoreLogic.dll
+E:\EXPERIMENTS\25072023\CoreLogic\bin\Debug\net7.0\CoreLogic.pdb
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\CoreLogic.csproj.AssemblyReference.cache
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\CoreLogic.GeneratedMSBuildEditorConfig.editorconfig
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\CoreLogic.AssemblyInfoInputs.cache
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\CoreLogic.AssemblyInfo.cs
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\CoreLogic.csproj.CoreCompileInputs.cache
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\CoreLogic.dll
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\refint\CoreLogic.dll
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\CoreLogic.pdb
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\CoreLogic.genruntimeconfig.cache
+E:\EXPERIMENTS\25072023\CoreLogic\obj\Debug\net7.0\ref\CoreLogic.dll
