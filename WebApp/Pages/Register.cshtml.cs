@@ -2,6 +2,7 @@ using CoreLogic.Models;
 using CoreLogic.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebApp.Pages
 {
@@ -11,6 +12,8 @@ namespace WebApp.Pages
         [BindProperty]
         public Employee employee { get; set; }
 
+        public List<SelectListItem> RoleOptions { get; set; }
+
         public IActionResult OnGet()
         {
             return Page();
@@ -18,7 +21,7 @@ namespace WebApp.Pages
 
 
 
-        public IActionResult OnPost()
+        /*public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
@@ -36,6 +39,35 @@ namespace WebApp.Pages
             {
                 return Page();
             }
+        }
+*/
+
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+
+                PopulateRolesDropDown();
+                return Page();
+            }
+            EmployeeService productService = new EmployeeService();
+
+            productService.AddEmployee(employee);
+            return RedirectToPage("./Index");
+        }
+
+        public void PopulateRolesDropDown()
+        {
+            EmployeeService employeeService = new EmployeeService();
+
+            var categories = employeeService.GetRoles();
+
+            RoleOptions = categories.Select(role =>
+                                      new SelectListItem
+                                      {
+                                          Value = role.Id.ToString(),
+                                          Text = role.Name
+                                      }).ToList();
         }
 
     }

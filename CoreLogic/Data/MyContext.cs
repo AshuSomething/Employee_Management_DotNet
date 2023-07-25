@@ -9,6 +9,8 @@ namespace EFGetStarted
         public DbSet<Attandance> Attandances { get; set; }
         public DbSet<DeletedEmployee> DeletedEmployees { get; set; }
 
+        public DbSet<Role> Roles { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             var server = "(localdb)";

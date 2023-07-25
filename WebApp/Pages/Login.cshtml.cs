@@ -42,7 +42,7 @@ public class LoginModel : PageModel
             return Page();
         }
 
-        Role = user.Roles;
+        //Role = user.Roles;
 
         // User has provided valid credentials. Proceed with your login process...
         await SignInUser();

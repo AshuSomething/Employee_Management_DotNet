@@ -28,10 +28,16 @@
                 <input asp-for="employee.Password" class="form-control" />
                 <span asp-validation-for="employee.Password" class="text-danger"></span>
             </div>
+            @*<div class="form-group">
+                <label asp-for="employee.RoleId" class="control-label"></label>
+                <input asp-for="employee.RoleId" class="form-control" />
+                <span asp-validation-for="employee.RoleId" class="text-danger"></span>
+            </div>*@
             <div class="form-group">
-                <!-- Hidden input field with a name and value -->
-                <input type="hidden" asp-for="employee.Roles" class="form-control" value="Worker" />
+                <label class="control-label">Role</label>
+                <select asp-for="employee.RoleId" asp-items="Model.RoleOptions" class="form-control"></select>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

@@ -90,5 +90,11 @@ namespace CoreLogic.Services
             // Add the new DeletedEmployee to the DeletedEmployees table
             ctx.DeletedEmployees.Add(deletedEmployee);
         }
+
+        public List<Role> GetRoles()
+        {
+            MyContext ctx = new MyContext();
+            return ctx.Roles.ToList();
+        }
     }
 }
