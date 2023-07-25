@@ -29,6 +29,10 @@
                 <span asp-validation-for="employee.Password" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <!-- Hidden input field with a name and value -->
+                <input type="hidden" asp-for="employee.Roles" class="form-control" value="Worker" />
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
