@@ -8,6 +8,8 @@ namespace EFGetStarted
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Attandance> Attandances { get; set; }
         public DbSet<DeletedEmployee> DeletedEmployees { get; set; }
+        public DbSet<Request> Requests{ get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
