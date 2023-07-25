@@ -11,6 +11,8 @@ namespace EFGetStarted
         public DbSet<Request> Requests{ get; set; }
 
 
+        public DbSet<Role> Roles { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             var server = "(localdb)";

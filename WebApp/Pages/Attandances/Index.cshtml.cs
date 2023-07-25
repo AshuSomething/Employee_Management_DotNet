@@ -16,7 +16,7 @@ namespace WebApp.Attandances
         {
             if (Id != 0)
             {
-                return Redirect($"Attandances/abcd?id={Id}");
+                return Redirect($"Attandances/employeeAttendance?id={Id}");
             }
             // Load attendances for the employee
             //int employeeId = 2; // Replace with the actual employee ID
