@@ -42,7 +42,12 @@ public class LoginModel : PageModel
             return Page();
         }
 
-        //Role = user.Roles;
+        if(user.RoleId == 1)
+            { Role = "Worker"; }
+        else
+        {
+            Role = "Admin";
+        }
 
         // User has provided valid credentials. Proceed with your login process...
         await SignInUser();

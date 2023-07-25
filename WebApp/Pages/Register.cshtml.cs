@@ -16,38 +16,18 @@ namespace WebApp.Pages
 
         public IActionResult OnGet()
         {
+            EmployeeService employeeService = new EmployeeService();
+            var roles = employeeService.GetRoles();
+            PopulateRolesDropDown();
             return Page();
         }
-
-
-
-        /*public IActionResult OnPost()
-        {
-            if (ModelState.IsValid)
-            {
-                EmployeeService productService = new EmployeeService();
-
-                // Make sure the Product object is not null before calling AddProduct
-                if (employee != null)
-                {
-                    productService.AddEmployee(employee);
-                }
-
-                return RedirectToPage("./Index");
-            }
-            else
-            {
-                return Page();
-            }
-        }
-*/
 
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
 
-                PopulateRolesDropDown();
+                
                 return Page();
             }
             EmployeeService productService = new EmployeeService();
