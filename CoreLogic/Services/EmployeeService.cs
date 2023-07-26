@@ -96,5 +96,13 @@ namespace CoreLogic.Services
             MyContext ctx = new MyContext();
             return ctx.Roles.ToList();
         }
+        public string GetRoleNameForEmployee(int roleId)
+        {
+            using (MyContext ctx = new MyContext())
+            {
+                var role = ctx.Roles.Find(roleId);
+                return role?.Name;
+            }
+        }
     }
 }

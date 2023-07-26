@@ -42,12 +42,8 @@ public class LoginModel : PageModel
             return Page();
         }
 
-        if(user.RoleId == 1)
-            { Role = "Worker"; }
-        else
-        {
-            Role = "Admin";
-        }
+        Role = employeeService.GetRoleNameForEmployee(user.RoleId) ?? "Worker";
+
 
         // User has provided valid credentials. Proceed with your login process...
         await SignInUser();
